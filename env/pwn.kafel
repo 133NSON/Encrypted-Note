@@ -1,0 +1,6 @@
+POLICY pwn {
+	DENY {
+		seccomp, ptrace,fork,kill
+	}
+}
+USE pwn DEFAULT ALLOW
