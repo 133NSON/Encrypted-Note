@@ -1,3 +1,4 @@
+// gcc note.c -lcrypto -o note
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
