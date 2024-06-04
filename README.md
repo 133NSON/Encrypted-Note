@@ -1,6 +1,6 @@
-出给某次银行内部AWD比赛的题目，记录一下
+出给某次银行内部AWD比赛的题目
 
-题目的docker配置在目录 `env` 中，使用 `docker-compose up` 启动docker
+题目的docker配置在目录 `env` 中
 
 题目的二进制附件为 `env/bin/note`
 
