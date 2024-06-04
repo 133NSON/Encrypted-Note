@@ -18,7 +18,7 @@
 
 在读入笔记内容时存在 `off by one` 漏洞造成单字节堆溢出，利用这个漏洞修改下一个堆块的size之后造成堆叠，后用堆叠连带泄露出heap相关地址，伪造出 `unsorted chunk` 后继续利用数据连带泄露libc相关地址（AES加密后的密文0x10字节对齐，所以只要密文后面紧跟着未被加密的下一个笔记的内容就可以泄露地址）。最后利用堆叠在写入笔记内容时劫持tache的fd为`__free_hook`，将其修改为可以栈迁移的 `gadget` 后构造ropchain泄露flag和key求得原flag
 
-## 0x03 UAF（double free）
+## 0x04 UAF（double free）
 
 ![](img/uaf.png)
 
